@@ -140,19 +140,23 @@
 
     <div class="row row--gutters-large">
       <div class="row__medium-6">
-        <form class="form form__feedback">
-          <input type="text" name="" placeholder="Enter Your Name">
-          <input type="text" name="" placeholder="Enter Your Email">
-          <input type="text" name="" placeholder="Enter Your Phone Number">
-          <textarea placeholder="Type Your Feedback"></textarea>
-          <button class="btn btn--send">Send</button>
-        </form>
+        <div class="feedback">
+          <form class="form form__feedback">
+            <input type="text" name="" placeholder="Enter Your Name">
+            <input type="text" name="" placeholder="Enter Your Email">
+            <input type="text" name="" placeholder="Enter Your Phone Number">
+            <textarea placeholder="Type Your Feedback"></textarea>
+            <button class="btn btn--send">Send</button>
+          </form>
+        </div>
       </div>
       <div class="row__medium-6">
-        <div class="wrapper wrapper--center">
-          <picture>
-          <img srcset="assets/images/hero--large.png 800w, assets/images/hero--large.png 1600w" alt="Our Founder">
-        </picture>
+        <div class="feedback">
+          <div class="wrapper wrapper--center">
+            <picture>
+              <img srcset="assets/images/hero--large.png 800w, assets/images/hero--large.png 1600w" alt="Our Founder">
+            </picture>
+          </div>
         </div>
       </div>
     </div>
@@ -162,6 +166,12 @@
 <footer class="site-footer">
   <p>Designed by <a href="facebook.com/darkzgothic1">Zahid Hasan</a></p>
 </footer>
+
+<!-- build:js assets/scripts/App.js -->
+  <script src="/temp/scripts/App.js"></script>
+  <!-- endbuild -->
+
+
 </body>
 	
 </html>
