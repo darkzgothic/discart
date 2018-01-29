@@ -11,7 +11,7 @@ gulp.task('watch', function(){
 		}
 	});
 
-	watch('./app/auth.html', function(){
+	watch('./app/**/*.html', function(){
 		browserSync.reload();
 		console.log("Hello");
 	});
