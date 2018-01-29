@@ -7,18 +7,7 @@
 		display: block;
 	}
 
-	&__logo {
-		position: absolute;
-		color: $mainOrange;
-		top: 0;
-		font-weight: 400;
-		font-size: 2rem;
-		left: 5%;
 
-		@mixin atSmall {
-			font-size: 2.5rem;
-		}
-	}
 
 	&__text-content {
 		position: absolute;
@@ -27,10 +16,12 @@
 		width: 100%;
 		text-align: center;
 		transform: translateY(100%) translateX(-50%);
+		padding-top: 20px;
 
 		@mixin atMedium {
 			top: 50%;
 			left: 20%;
+			padding-top: 0;
 		}
 	}
 
