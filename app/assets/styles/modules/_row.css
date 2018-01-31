@@ -38,6 +38,19 @@
 			width: 37%;
 		}
 
+		&__medium-4--bordered {
+			float: left;
+			width: 33.33%;
+			border: 2px solid $mainBlue;
+			padding: 20px;
+		}
+
+		&__medium-6--padding-right {
+			float: left;
+			width: 50%;
+			padding: 20px;
+		}
+
 		&__medium-6 {
 			float: left;
 			width: 50%;

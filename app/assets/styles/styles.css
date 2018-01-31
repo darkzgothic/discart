@@ -19,6 +19,11 @@
 @import "modules/_form";
 @import "modules/_site-footer";
 @import "modules/_reveal-item";
+@import "modules/_slideshow";
+@import "modules/_slider";
+@import "modules/_sidenav";
+@import "modules/_profile";
+@import "modules/_box";
 
 
 

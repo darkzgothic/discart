@@ -16,6 +16,7 @@
 
 <header class="site-header">
   <div class="wrapper">
+  <!-- <img src="assets/images/icons/clear-view-escapes.svg"> -->
     <div class="site-header__logo">Discart</div>
     <div class="site-header__menu-icon">
       <div class="site-header__menu-icon__middle"></div>
@@ -23,7 +24,6 @@
     <div class="site-header__menu-content">
       <nav class="primary-nav primary-nav--pull-right">
         <ul>
-          <li><a href="index.html" id="home-link">Home</a></li>
           <li><a href="" id="login-link">Login</a></li>
           <li><a href="" id="register-link">Register</a></li>
         </ul>
@@ -32,22 +32,35 @@
   </div>
 </header>
 
-<div class="page-section">
-    <div class="wrapper wrapper--top-margin">
-        <div class="generic-content-container">
-          <h1 class="headline headline--centered">Are you merchandiser? Want to give advertisement?</h1>
-        </div>
+<div class="header-block">
+    <div>
+      <picture>
+        <source srcset="assets/images/hero--large.png 1920w, assets/images/hero--large-hi-dpi.png 3840w" media="(min-width: 1380px)">
+        <source srcset="assets/images/hero--medium.png 1380w, assets/images/hero--medium-hi-dpi.png 2760w" media="(min-width: 990px)">
+        <source srcset="assets/images/hero--small.png 990w, assets/images/hero--small-hi-dpi.png 1980w" media="(min-width: 640px)">
+
+        <img srcset="assets/images/hero--smaller.png 640w, assets/images/hero--smaller-hi-dpi.png 1280w" class="header-block__image">
+      </picture>
+
+      <div class="header-block__text-content">
+        <div class="wrapper">
+          <h1 class="header-block__title">Make Your Shopping Fast</h1>
+          <p><a class="btn btn--playstore" href="#"><img class="btn__icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVEhL7ZW9LwRBGIfXRyIRIoKCBJUarSi1IqGU0/gvJCJUGtGpKVD5KEh0hIJe4d/xPDe7yUas27mb5Ar3JE/y3rvzm7Vjdybr8Qf7OBDKX/GaY5Kzh9uhzCZwGZdw3AZ4zTHJGcMvfMJbPMm9y3tec0xSpvABXcpRGz+wd4CP6NgkjOArruAMHmI/Flgf4TQ6xrFmOuYUN0PZ/L8+41DzV8D6Bb0mW2imIwbxLZRRvKPZaPrQN3YRr3AHJ7FRszZj1jmcqzbXeIb+5Zc2IjFj1jmcqxa+lTehzOZxN5RRmDErfnquREvmsHjKYfRlicWMWXEu52xJ+cbiLhVLOdPWjbv2xL2lrktbT9y1z0mKDeQDy8teFzNmozYQcZtzy3Pjb/fGZp0jassscIk85tZwFT3o1dpeVd9M7eWtYgOP8RMXcq3tVfXXMRnl47FOnYz/d+N79GD3bfXbLKjqJ2MWL/A8rwuq+j1KZNk3wAxRmKjw09MAAAAASUVORK5CYII="> Playstore</a></p> 
+        </div> 
+      </div>
     </div>
-  </div>
 </div>
 
-<div id="sticky-header" class="page-section">
+
+<div id="login" class="page-section">
   <div class="wrapper">
+    
+    <h2 class="section-title section-title--blue">Login <strong>OR</strong> Register</h2>
+
     <div class="row row--gutters-large">
       <div class="row__medium-6">
-        <h2 class="section-title section-title--blue">Login</h2>
         <div class="feedback">
-          <form class="form form__feedback" action="profile.html">
+          <form class="form form__feedback">
             <input type="text" name="" placeholder="Enter Your Email">
             <input type="password" name="" placeholder="Enter Your Password">
             <button class="btn btn--send">Login</button>
@@ -55,7 +68,6 @@
         </div>
       </div>
       <div class="row__medium-6">
-        <h2 class="section-title section-title--blue">Register</h2>
         <div class="feedback">
           <form class="form form__feedback">
             <input type="text" name="" placeholder="Enter Your Name">
@@ -77,7 +89,6 @@
 
 <script src="assets/scripts/App-d8264dd3d2.js"></script>
 
-
 </body>
-	
+  
 </html>

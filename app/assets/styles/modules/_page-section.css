@@ -1,8 +1,13 @@
 .page-section {
 	padding: .875rem 0;
+	margin-bottom: 20px;
 
 	@mixin atMedium {
 		padding: 4.5rem 0;
+	}
+
+	&--less-top-margin {
+		padding: 0 0;
 	}
 
 	&--blue {

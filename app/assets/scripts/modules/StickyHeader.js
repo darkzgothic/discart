@@ -4,25 +4,9 @@ import smoothScroll  from 'jquery-smooth-scroll';
 
 class StickyHeader {
 	constructor() {
-		this.lazyImages = $(".lazyload");
 		this.siteHeader = $('.site-header');
-		this.headerTriggerElement = $(".header-block__title");
+		this.headerTriggerElement = $("#sticky-header");
 		this.createWaypoint();
-		this.pageSection = $(".page-section");
-		this.headerLinks = $(".primary-nav a");
-		this.createPageSecWaypoint();
-		this.addSmoothScrolling();
-		// this.refreshWaypoint();
-	}
-
-	refreshWaypoint() {
-		this.lazyImages.load(function() {
-			Waypoint.refreshAll();
-		});
-	}
-
-	addSmoothScrolling() {
-		this.headerLinks.smoothScroll();
 	}
 
 	createWaypoint() {
@@ -38,36 +22,6 @@ class StickyHeader {
 				}
 				
 			}
-		});
-	}
-
-	createPageSecWaypoint(){
-		var that = this;
-		this.pageSection.each(function() {
-			var currentPageSec = this;
-			new Waypoint({
-				element: currentPageSec,
-				handler: function(direction) {
-					if (direction == "down") {
-						var matchingHeaderLink = currentPageSec.getAttribute("data-matching-link");
-						that.headerLinks.removeClass("is-current-link");
-						$(matchingHeaderLink).addClass("is-current-link");
-					}
-				},
-				offset: "18%"
-			});
-
-			new Waypoint({
-				element: currentPageSec,
-				handler: function(direction) {
-					if (direction == "up") {
-						var matchingHeaderLink = currentPageSec.getAttribute("data-matching-link");
-						that.headerLinks.removeClass("is-current-link");
-						$(matchingHeaderLink).addClass("is-current-link");
-					}
-				},
-				offset: "-40%"
-			});
 		});
 	}
 }

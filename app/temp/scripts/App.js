@@ -11216,6 +11216,10 @@ var _MobileMenu = __webpack_require__(6);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
+var _ImageSlider = __webpack_require__(7);
+
+var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11226,6 +11230,17 @@ new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
 new _RevealOnScroll2.default((0, _jquery2.default)(".feedback"), "85%");
 var stickyHeader = new _StickyHeader2.default();
 var mobileMenu = new _MobileMenu2.default();
+var imageSlider = new _ImageSlider2.default();
+
+console.log("hiiiii");
+
+(0, _jquery2.default)("#slideshow > div:gt(0)").hide();
+
+setInterval(function () {
+		(0, _jquery2.default)('#slideshow > div:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#slideshow');
+}, 3000);
+
+console.log("done");
 
 /***/ }),
 /* 3 */
@@ -11322,30 +11337,12 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
-		this.lazyImages = (0, _jquery2.default)(".lazyload");
 		this.siteHeader = (0, _jquery2.default)('.site-header');
-		this.headerTriggerElement = (0, _jquery2.default)(".header-block__title");
+		this.headerTriggerElement = (0, _jquery2.default)("#sticky-header");
 		this.createWaypoint();
-		this.pageSection = (0, _jquery2.default)(".page-section");
-		this.headerLinks = (0, _jquery2.default)(".primary-nav a");
-		this.createPageSecWaypoint();
-		this.addSmoothScrolling();
-		// this.refreshWaypoint();
 	}
 
 	_createClass(StickyHeader, [{
-		key: 'refreshWaypoint',
-		value: function refreshWaypoint() {
-			this.lazyImages.load(function () {
-				Waypoint.refreshAll();
-			});
-		}
-	}, {
-		key: 'addSmoothScrolling',
-		value: function addSmoothScrolling() {
-			this.headerLinks.smoothScroll();
-		}
-	}, {
 		key: 'createWaypoint',
 		value: function createWaypoint() {
 			var that = this;
@@ -11359,37 +11356,6 @@ var StickyHeader = function () {
 						that.siteHeader.removeClass("site-header--dark");
 					}
 				}
-			});
-		}
-	}, {
-		key: 'createPageSecWaypoint',
-		value: function createPageSecWaypoint() {
-			var that = this;
-			this.pageSection.each(function () {
-				var currentPageSec = this;
-				new Waypoint({
-					element: currentPageSec,
-					handler: function handler(direction) {
-						if (direction == "down") {
-							var matchingHeaderLink = currentPageSec.getAttribute("data-matching-link");
-							that.headerLinks.removeClass("is-current-link");
-							(0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
-						}
-					},
-					offset: "18%"
-				});
-
-				new Waypoint({
-					element: currentPageSec,
-					handler: function handler(direction) {
-						if (direction == "up") {
-							var matchingHeaderLink = currentPageSec.getAttribute("data-matching-link");
-							that.headerLinks.removeClass("is-current-link");
-							(0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
-						}
-					},
-					offset: "-40%"
-				});
 			});
 		}
 	}]);
@@ -11815,6 +11781,69 @@ var MobileMenu = function () {
 }();
 
 exports.default = MobileMenu;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ImageSlider = function () {
+	function ImageSlider() {
+		// this.siteHeader = $(".site-header");
+		// this.menuIcon = $(".site-header__menu-icon");
+		// this.menuContent = $(".site-header__menu-content");
+		// this.events();
+		// $(".slideshow").hide();
+		// console.log("hiiiii");
+
+		// $("#slideshow > div:gt(0)").hide();
+
+		// setInterval(function() {
+		//   $('#slideshow > div:first')
+		//     .fadeOut(1000)
+		//     .next()
+		//     .fadeIn(1000)
+		//     .end()
+		//     .appendTo('#slideshow');
+		// }, 3000);
+
+		_classCallCheck(this, ImageSlider);
+	}
+
+	_createClass(ImageSlider, [{
+		key: 'events',
+		value: function events() {
+			// this.menuIcon.click(this.toogleTheMenu.bind(this));
+		}
+	}, {
+		key: 'toogleTheMenu',
+		value: function toogleTheMenu() {
+			// this.menuContent.toggleClass("site-header__menu-content--is-visible");
+			// this.siteHeader.toggleClass("site-header--is-expanded");
+			// this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+		}
+	}]);
+
+	return ImageSlider;
+}();
+
+exports.default = ImageSlider;
 
 /***/ })
 /******/ ]);
